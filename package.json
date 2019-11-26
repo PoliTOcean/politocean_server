@@ -1,0 +1,22 @@
+{
+    "name": "politocean_server",
+    "version": "1.0.0",
+    "description": "Server-Side",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon --exec babel-node main.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "dotenv": "^8.1.0",
+        "express": "^4.17.1",
+        "mongoose": "^5.6.12"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.5.5",
+        "@babel/node": "^7.5.5",
+        "@babel/preset-env": "^7.5.5",
+        "nodemon": "^1.19.2"
+    }
+}
