@@ -13,6 +13,6 @@ electronics.use(async (req, res, next) => {
 });
 
 electronics.get('/', (req,res) => res.status(200).send('Hello, World'));
-electronics.use('/component', routes.component);
+electronics.use('/components', routes.components);
 
 export default electronics;
