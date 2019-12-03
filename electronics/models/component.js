@@ -15,6 +15,6 @@ const componentSchema = new mongoose.Schema({
     updated_on: Date
 });
 
-const Component = mongoose.model('components', componentSchema);
+const Component = mongoose.model('Component', componentSchema);
 
 export default Component;
