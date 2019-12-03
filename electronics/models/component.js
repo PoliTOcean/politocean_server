@@ -9,10 +9,10 @@ const componentSchema = new mongoose.Schema({
     quantity: Number,
     note: String,
     link: String,
-    created_by: String,
-    created_on: String,
-    updated_by: String,
-    updated_on: String
+    created_by: Number,
+    created_on: Date,
+    updated_by: Number,
+    updated_on: Date
 });
 
 const Component = mongoose.model('Component', componentSchema);
