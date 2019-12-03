@@ -1,3 +1,3 @@
-import component from './component';
+import components from './component';
 
-export default { component };
+export default { components };
