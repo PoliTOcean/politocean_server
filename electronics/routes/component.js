@@ -5,7 +5,14 @@ var ObjectId = require('mongoose').Types.ObjectId;
 const router = Router();
 
 var getComponents = async (req, res) => {
-    const query = req.context.models.Component.find();
+    const query = (req.query.search)
+        ? req.context.models.Component.find({ 
+            $or: [
+                { name: { "$regex": req.query.search, "$options": "i" }},
+                { category: { $regex: req.query.search, $options: "i" }},
+                { package: { $regex: req.query.search, $options: "i" }}
+            ]})
+        : req.context.models.Component.find();
 
     try {
         const results = await query;
