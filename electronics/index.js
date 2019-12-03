@@ -12,6 +12,7 @@ electronics.use(async (req, res, next) => {
     next();
 });
 
+electronics.get('/', (req,res) => res.status(200).send('Hello, World'));
 electronics.use('/component', routes.component);
 
 export default electronics;
