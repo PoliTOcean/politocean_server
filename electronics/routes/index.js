@@ -1,3 +1,4 @@
 import components from './component';
+import users from './user';
 
-export default { components };
+export default { components, users };
