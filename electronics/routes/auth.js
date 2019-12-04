@@ -11,7 +11,7 @@ var authByEmailAndPassword = async (req, res) => {
         return res.status(400).send({ error: "Auth password is not defined" });
     }
 
-    const query = req.context.models.User.find({ email: req.body.email, password: req.body.password });
+    const query = req.context.models.User.findOne({ email: req.body.email, password: req.body.password });
     
     try {
         const result = await query;
