@@ -15,11 +15,5 @@
         "mongoose-autopopulate": "0.9.1",
         "babel-cli": "6.26.0",
         "babel-preset-env": "1.7.0"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.5.5",
-        "@babel/node": "^7.5.5",
-        "@babel/preset-env": "^7.5.5",
-        "nodemon": "^1.19.2"
     }
 }
