@@ -15,5 +15,6 @@ electronics.use(async (req, res, next) => {
 electronics.get('/', (req,res) => res.status(200).send('Hello, World'));
 electronics.use('/components', routes.components);
 electronics.use('/users', routes.users);
+electronics.use('/auth', routes.auth);
 
 export default electronics;
