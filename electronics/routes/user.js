@@ -4,14 +4,14 @@ const router = Router();
 
 var getUsers = async (req, res) => {
     const query = (req.query.search)
-        ? req.context.models.Component.find({ 
+        ? req.context.models.User.find({ 
             $or: [
                 { _id: { $regex: req.query.search, $options: "i" }},
                 { firstName: { "$regex": req.query.search, "$options": "i" }},
                 { lastName: { $regex: req.query.search, $options: "i" }},
                 { email: { $regex: req.query.search, $options: "i" }}
             ]})
-        : req.context.models.Component.find();
+        : req.context.models.User.find();
 
     try {
         const results = await query;
